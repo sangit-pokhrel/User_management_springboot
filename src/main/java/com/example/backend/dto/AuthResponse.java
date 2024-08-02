@@ -4,8 +4,7 @@ package com.example.backend.dto;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
+
 public class AuthResponse {
     private String token;
 
@@ -13,5 +12,11 @@ public class AuthResponse {
         this.token = token;
     }
 
-    // Getter
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
 }

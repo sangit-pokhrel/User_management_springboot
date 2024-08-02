@@ -1,7 +1,5 @@
 package com.example.backend.util;
 
-
-
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -9,6 +7,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
+import javax.xml.bind.DatatypeConverter;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -63,5 +62,14 @@ public class JwtTokenUtil {
     public Boolean validateToken(String token, UserDetails userDetails) {
         final String username = getUsernameFromToken(token);
         return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
+    }
+
+
+
+    public String generateToken(String subject) {
+        return Jwts.builder()
+                .setSubject(subject)
+                .signWith(SignatureAlgorithm.HS512, DatatypeConverter.parseBase64Binary(secret))
+                .compact();
     }
 }

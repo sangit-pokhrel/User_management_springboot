@@ -1,34 +1,29 @@
 package com.example.backend.dto;
 
 import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
 
-public class UserDTO {
+public class UserCreateDTO {
+
+
     private Long id;
 
-    @NotBlank
+    @NotEmpty
     private String fullname;
 
+    @NotEmpty
     @Email
-    @NotBlank
     private String email;
 
-    @NotBlank
     private String phonenumber;
-
-    @NotBlank
     private String permanentAddress;
-
     private String temporaryAddress;
-
-    private byte[] picture;
-
-    @NotBlank
     private String parentsNumber;
-
-    private String password; // Added password field
+    private String password;
+    private String pictureUrl;
 
     // Getters and Setters
+
 
     public Long getId() {
         return id;
@@ -37,6 +32,7 @@ public class UserDTO {
     public void setId(Long id) {
         this.id = id;
     }
+
 
     public String getFullname() {
         return fullname;
@@ -78,14 +74,6 @@ public class UserDTO {
         this.temporaryAddress = temporaryAddress;
     }
 
-    public byte[] getPicture() {
-        return picture;
-    }
-
-    public void setPicture(byte[] picture) {
-        this.picture = picture;
-    }
-
     public String getParentsNumber() {
         return parentsNumber;
     }
@@ -100,5 +88,13 @@ public class UserDTO {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getPictureUrl() {
+        return pictureUrl;
+    }
+
+    public void setPictureUrl(String pictureUrl) {
+        this.pictureUrl = pictureUrl;
     }
 }
