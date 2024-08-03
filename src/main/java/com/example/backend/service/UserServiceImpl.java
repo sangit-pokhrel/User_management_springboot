@@ -17,7 +17,7 @@ public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
 
     @Override
-    public UserCreateDTO createUser(UserCreateDTO userCreateDTO) {
+    public UserCreateDTO createUser(User userCreateDTO) {
         User user = new User();
         mapUserCreateDTOToUser(userCreateDTO, user);
         userRepository.save(user);

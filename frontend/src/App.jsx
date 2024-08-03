@@ -10,6 +10,9 @@ import Dashboard from './pages/Dashboard';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import  ToastContainer  from 'react-hot-toast';
+import TeacherList from "./pages/TeacherList.jsx";
+
+// import AddStudent from "./pages/AddStudent.jsx";
 
 const App = () => {
   return (
@@ -27,6 +30,8 @@ const App = () => {
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/dashboard" element={<Dashboard />} />
+                {/*<Route path="/add-student" element={<AddStudent />} />*/}
+                <Route path="/add-teacher" element={<TeacherList />} />
             </Routes>
         </main>
         <Footer />

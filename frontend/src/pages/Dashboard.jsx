@@ -188,7 +188,7 @@ const Dashboard = () => {
     return (
         <>
             <div className="p-8">
-                <h1 className="text-2xl font-bold mb-4">Dashboard</h1>
+                <h1 className="text-2xl font-bold mb-4">Add Student</h1>
                 <form onSubmit={handleSubmit} className="mb-8">
                     <div className="grid grid-cols-2 gap-4">
                         <div>

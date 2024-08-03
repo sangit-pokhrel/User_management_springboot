@@ -43,9 +43,16 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-background px-4 py-12 sm:px-6 lg:px-8">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-background px-4 py-12 sm:px-6 lg:px-8"
+         style={{
+           backgroundImage: 'url("https://images.pexels.com/photos/2847648/pexels-photo-2847648.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',
+           backgroundSize: 'cover',
+           backgroundPosition: 'center',
+           backgroundRepeat: 'no-repeat',
+         }}
+    >
       <Toaster position="top-center" />
-      <div className="max-w-md w-full bg-white p-8 rounded-md shadow-md">
+      <div className="max-w-2xl w-full bg-white p-8 rounded-md shadow-md">
         <div className="text-center space-y-2">
           <h1 className="text-3xl font-bold">Welcome to Acme Inc</h1>
           <p className="text-muted-foreground">
